@@ -41,3 +41,5 @@ To run MediaCat in Docker, follow these steps:
    ![alt text](https://github.com/zstall/es-mediacat-docker/blob/master/media/navbar.png?raw=true)
 
 7. Finally, index the DB by clicking the index button at the bottom of the home page!
+
+   ![alt text](https://github.com/zstall/es-mediacat-docker/blob/master/media/index_MC.png?raw=true)
