@@ -34,7 +34,7 @@ To run MediaCat in Docker, follow these steps:
    /app/
    ```
 
-   ![alt text](https://github.com/zstall/es-mediacat-docker/blob/master/media/walkdir.png?raw=true)
+   ![alt text](https://github.com/zstall/es-mediacat-docker/blob/master/media/walkdir2.png?raw=true)
 
 6. That will walk a test directory with some image and files, **refresh the browser by click HOME in the nav bar**:
 
