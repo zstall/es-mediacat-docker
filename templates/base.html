@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MediaCat</title>
+    <link rel="icon" href="#">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- **** CUSTOM CSS **** -->
+    <link rel="stylesheet" href="/static/css/main.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat" rel="stylesheet">
+    <!-- TAB LOGO -->
+    <link rel="shortcut icon" href="#">
+
+  </head>
+  <body id="MediaCatPage" data-spy="scroll" data-target=".navbar" data-offset="100">
+  <!-- **** NAVBAR **** -->
+  <!-- <nav class="base_navi navbar navbar-expand-lg sticky-top latofont"> -->
+    <nav class="navi navbar navbar-expand-lg bg-dark navbar-dark sticky-top latofont">
+
+      <!--
+      <a class="navbar-brand" href="#">
+        <img src="#" width="30" height="30" class="d-inline-block align-top" alt="">
+      </a>
+      -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#zNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="zNavbar">
+        <ul class="navbar-nav mr-auto">
+          <!-- CUSTOM NAVIGATION BARS -->
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('home')}}">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About MediaCat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="http://zachstall.co">zachstall.co</a>
+          </li>
+          {% if username is defined %}
+          <li class="nav-item" >
+            <a href="{{url_for('file_search')}}" class="nav-link">Search Files</a>
+          </li>
+          <li class="nav-item" >
+            <a href="{{url_for('logout')}}" class="nav-link">logout</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('login_page')}}">login</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+</nav>
+
+
+
+
+    <!-- **** PAGE CONTENT **** -->
+    {% block body %}
+    {% endblock %}
+
+    <!-- **** FOOTER **** -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- custom JavaScript -->
+    <!-- JavaScript -->
+    <script type="text/javascript" src="/static/js/master.js">
+
+    </script>
+
+  </body>
+</html>
